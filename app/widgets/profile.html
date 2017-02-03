@@ -1,0 +1,25 @@
+<section ng-controller="contactProfileCtrl" class="profile">
+  <div class="row coverpic-container">
+    <img class="coverpic" src="/images/profile-cover.jpg" alt="Profile cover">
+  </div>
+  <div class="row profiledesc">
+    <div class="col-xs-4">
+      <img class="profilepic" ng-src="{{userData.picture}}" alt="Profile pic">
+    </div>
+    <div class="col-xs-8">
+      <h2>{{userData.name}}</h2>
+      <p>{{userData.description}}</p>
+    </div>
+  </div>
+  <div class="row stats">
+    <div class="col-xs-4">
+      <div class="stat"><span class="glyphicon glyphicon-eye-open"></span> {{userData.views}}</div>
+    </div>
+    <div class="col-xs-4">
+      <div class="stat"><span class="glyphicon glyphicon-comment"></span> {{userData.comments}}</div>
+    </div>
+    <div class="col-xs-4">
+      <div class="stat"><span class="glyphicon glyphicon-heart"></span> {{userData.likes}}</div>
+    </div>
+  </div>
+</section>

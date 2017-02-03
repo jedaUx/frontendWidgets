@@ -1,0 +1,12 @@
+{
+  "result":"SUCCESS",
+  "user": {
+    "name":"Angelica Burbano",
+    "email": "angelica@gmail.com",
+    "contacts": [
+      {"name": "Natalia"},
+      {"name": "Carolina"},
+      {"name": "Andres"}
+    ]
+  }
+}

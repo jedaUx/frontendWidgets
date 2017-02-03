@@ -1,0 +1,12 @@
+{
+  "result":"SUCCESS",
+  "user": {
+    "name":"Angelica Burbano",
+    "description": "Adolescente, me encanta la musica",
+    "followers": 2302,
+    "views": 256,
+    "comments": 17,
+    "likes": 458,
+    "picture": "/images/profile-pic.png"
+  }
+}

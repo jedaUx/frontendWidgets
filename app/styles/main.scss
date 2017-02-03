@@ -1,0 +1,215 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+//variables
+$bg-widget-color: #FEFEFE;
+$bg-widget-color2: #F6F1ED;
+$fc-widget-color: #B1A599;
+$fc-widget-color2: #5C5146;
+$aux-widget-color: #4DAF7B;
+$aux-widget-color2: #E55F3B;
+
+//end variables
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  background-color: #C18068;
+  color: #ffffff;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  background-color: $bg-widget-color;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.profile{
+
+  background-color: $bg-widget-color;
+  color: $fc-widget-color2;
+  width: 100%;
+
+  .coverpic-container{
+    margin: 0 0;
+  }
+
+  .coverpic{
+    max-height: 200px;
+    height: 150px;
+    width: 100%;
+  }
+
+  .profiledesc{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 0;
+  }
+
+  .profilepic{
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 50%;
+    border: 2px solid $fc-widget-color;
+  }
+
+  .stats{
+    background-color: $bg-widget-color2;
+    margin: 0 0;
+
+    .stat{
+      padding: 10%;
+      color: $fc-widget-color;
+      font-size: 1.2em;
+    }
+
+    .stat:hover{
+      color: $aux-widget-color2;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.contact-options{
+
+  background-color: $bg-widget-color;
+  color: $fc-widget-color2;
+  width: 100%;
+
+  .profiledesc{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 0;
+    background-color: $fc-widget-color;
+    color: #FFFFFF;
+  }
+
+  .profiledesc p a{
+    color: $fc-widget-color2;
+  }
+
+  .profilepic{
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 50%;
+    border: 2px solid $fc-widget-color2;
+  }
+
+  .options-container{
+    margin: 0 0;
+    color: $fc-widget-color;
+
+    a{
+      color: $fc-widget-color;
+      border-radius: 0px;
+    }
+
+    a:hover{
+      background-color: $bg-widget-color2;
+      color: $fc-widget-color;
+      border-left: 3px solid $aux-widget-color;
+
+      span{
+        color: $aux-widget-color2;
+      }
+    }
+  }
+
+
+
+}
+
+.contact-form{
+  background-color: $bg-widget-color;
+  color: $fc-widget-color;
+  padding: 5%;
+
+  .submit{
+    text-align: right;
+  }
+}
+
+.btn-primary{
+  background-color: $aux-widget-color2;
+  border-color: $aux-widget-color2;
+}
+
+.btn-primary:hover{
+  background-color: darken($aux-widget-color2, 13);
+  border-color: darken($aux-widget-color2, 13);
+}
+
+.btn-primary[disabled]:hover{
+  background-color: darken($aux-widget-color2, 13);
+  border-color: darken($aux-widget-color2, 13);
+}
+
+.btn-default{
+  background-color: darken($bg-widget-color2, 5);
+  border-color: darken($bg-widget-color2, 5);
+  color: #FFFFFF;
+}
+
+.btn-default:hover{
+  background-color: darken($bg-widget-color2, 13);
+  border-color: darken($bg-widget-color2, 13);
+  color: #FFFFFF;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+}

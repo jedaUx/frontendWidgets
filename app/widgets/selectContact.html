@@ -1,0 +1,12 @@
+<section class="contactList-container">
+  <div class="modal-header">
+    <h3 class="modal-title">Select Contacts</h3>
+  </div>
+
+  <div class="modal-body">
+    {{addContacts.contactList}}
+    <ul>
+      <li ng-repeat="contact in addContacts.contactList">{{contact.name}}</li>
+    </ul>
+  </div>
+</section>
