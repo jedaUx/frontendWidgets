@@ -1,12 +1,14 @@
-{
-  "result":"SUCCESS",
-  "user": {
-    "name":"Angelica Burbano",
-    "email": "angelica@gmail.com",
-    "contacts": [
-      {"name": "Natalia"},
-      {"name": "Carolina"},
-      {"name": "Andres"}
-    ]
+[
+  {
+    "name": "Natalia",
+    "email": "nat@gmail.com"
+  },
+  {
+    "name": "Carolina",
+    "email": "car@gmail.com"
+  },
+  {
+    "name": "Andres",
+    "email": "and@gmail.com"
   }
-}
+]

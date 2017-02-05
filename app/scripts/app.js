@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap',    
+    'ui.bootstrap',
+    'ngTagsInput',  
     'frontDirectives'
   ])
   .config(function ($routeProvider) {

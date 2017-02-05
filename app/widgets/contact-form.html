@@ -1,14 +1,15 @@
 <section ng-controller="contactFormCtrl" class="contact-form">
   <form name="msgForm">
-    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    <div class="alert alert-dismissable alert-success" ng-repeat="alert in alerts" type="{{alert.type}}">
+      <button type="button" class="close" ng-click="closeAlert($index)" data-dismiss="alert">×</button>      
+      {{alert.msg}}
+    </div>
     <div class="form-group" ng-class="{'has-error': hasError(msgForm.name)}">
       <label class="control-label" for="name">Contacts*</label>
-      <div class="input-group">
-        <input type="text" name="name" id="name" class="form-control" ng-model="msg.name" required>
-        <span class="input-group-btn">
-          <button uib-popover-template="addContacts.templateUrl" popover-placement="left-top" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
-        </span>
-      </div>
+      <tags-input class="contacts" placeholder="Type to add a contact" tag-class="{tag1: $index % 2 == 0, tag2: $index % 2 != 0}" ng-model="msg.name" display-property="name">
+          <auto-complete source="loadItems()" max-results-to-show="5"
+                     template="/widgets/contactData.html"></auto-complete>
+      </tags-input>
       <span class="help-block" ng-show="showError(msgForm.name, 'required')">Este dato es importante.</span>
     </div>
     <div class="form-group" ng-class="{'has-error': hasError(msgForm.subject)}">
@@ -23,7 +24,7 @@
     </div>
     <div class="form-group submit">
       <span class="copy-option pull-left"><input type="checkbox" aria-label="..."> Save a copy</span>
-      <button type="button" class="btn btn-primary btn-contact" ng-disabled="!canSave(msgForm)" ng-click="submit()">Send Mail</button>
+      <button type="button" class="btn btn-primary btn-contact" ng-disabled="!canSave()" ng-click="submit()">Send Mail</button>
     </div>
   </form>
 </section>

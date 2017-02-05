@@ -1,6 +1,6 @@
 'use strict';
 
-var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngTagsInput']);
 
 dModule.directive('contactProfile', function(){
       return {
