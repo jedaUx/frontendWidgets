@@ -1,12 +1,12 @@
 <div ng-controller="datatransfer-reportCtrl" class="reports">
 
   <uib-tabset active="active">
-    <uib-tab index="0" heading="Diagram stats">
+    <uib-tab index="0" heading="{{'directives.dataTransferReport.Diagramstats' | translate}}">
       <div class="container datatransfer">
         <div class="row">
           <div class="col-xs-12">
             <div class="title">
-              <h5 class="text-center">DATA TRANSFERS</h5>
+              <h5 class="text-center">{{"directives.dataTransferReport.DataTransfers" | translate}}</h5>
             </div>
             <div class="chart">
               <canvas id="doughnut" class="chart chart-doughnut"
@@ -14,7 +14,8 @@
                 chart-colors="colors">
               </canvas>
               <div class="summary">
-                <h4 class="text-center">{{userData.totalfiles}} files</h4>
+                <h4 class="text-center">{{userData.totalfiles}}
+                {{"directives.dataTransferReport.files" | translate}}</h4>
                 <h1 class="text-center">{{userData.totalsize}} Gb</h1>
               </div>
             </div>
@@ -31,27 +32,27 @@
           <div class="col-xs-4 action">
             <button class="btn btn-secondary" type="button" name="button">
               <span class="glyphicon glyphicon-cloud-upload"></span>
-              <h6>Upload files</h6>
+              <h6>{{"directives.dataTransferReport.Uploadfiles" | translate}}</h6>
             </button>
           </div>
           <div class="col-xs-4 action">
             <button class="btn btn-secondary" type="button" name="button">
               <span class="glyphicon glyphicon-share"></span>
-              <h6>Share link</h6>
+              <h6>{{"directives.dataTransferReport.Sharelink" | translate}}</h6>
             </button>
           </div>
           <div class="col-xs-4 action">
             <button class="btn btn-secondary" type="button" name="button">
               <span class="glyphicon glyphicon-save"></span>
-              <h6>Backup</h6>
+              <h6>{{"directives.dataTransferReport.Backup" | translate}}</h6>
             </button>
           </div>
         </div>
       </div>
     </uib-tab>
-    <uib-tab index="1" heading="Month report">
+    <uib-tab index="1" heading="{{'directives.dataTransferReport.MonthReport' | translate}}">
       <div class="container">
-        Month Report
+        {{"directives.dataTransferReport.MonthReport" | translate}}
       </div>
     </uib-tab>
   </uib-tabset>
