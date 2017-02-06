@@ -1,0 +1,27 @@
+{
+  "result":"SUCCESS",
+  "user": {
+    "name":"Angelica Burbano",
+    "totalfiles": 2435,
+    "totalsize": 47,
+    "datatypes": [
+      {
+        "type": "audio",
+        "percentage": 55
+      },
+      {
+        "type": "video",
+        "percentage": 23
+      },
+      {
+        "type": "Photo",
+        "percentage": 17
+      },
+      {
+        "type": "Others",
+        "percentage": 10
+      }
+    ]
+
+  }
+}

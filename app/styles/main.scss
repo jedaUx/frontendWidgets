@@ -11,6 +11,8 @@ $fc-widget-color2: #5C5146;
 $aux-widget-color: #4DAF7B;
 $aux-widget-color2: #E55F3B;
 $aux-widget-color3: #5E90AF;
+$aux-widget-color4: #EBC85E;
+$aux-widget-color5: #F3ECE6;
 
 //end variables
 
@@ -273,6 +275,121 @@ body {
 
 .tag1.selected, .tag2.selected {
   background: darken($aux-widget-color, 13) !important;
+}
+
+// Data transfer style
+.reports li.active a{
+  background-color: $bg-widget-color;
+  color: $fc-widget-color;
+}
+
+.reports li a:hover{
+  background-color:darken( $bg-widget-color, 13);
+  color: $fc-widget-color;
+}
+
+.reports a{
+  background-color: transparent;
+  border: 2px solid $bg-widget-color !important;
+  color: $bg-widget-color;
+}
+
+.datatransfer{
+  background-color: $bg-widget-color;
+  color: $fc-widget-color;
+
+  .title h5{
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .chart{
+    position: relative;
+    width:100%;
+    height: 100%;
+
+    .summary{
+      left:50%;
+      top:50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position:absolute;
+
+      h4{
+        color: $aux-widget-color2;
+      }
+
+      h1{
+        font-weight: bold;
+      }
+    }
+  }
+
+  .stats{
+    background-color: $bg-widget-color2;
+    display: block;
+
+    .stat{
+      padding: 2%;
+      color: $fc-widget-color;
+      font-size: 1.2em;
+
+      h6{
+        font-weight: bold;
+      }
+    }
+
+    .stat:hover{
+      color: $aux-widget-color2;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .sg{
+      border-top: 2px solid $aux-widget-color;
+      border-left: 2px solid $bg-widget-color;
+    }
+
+    .sr{
+      border-top: 2px solid $aux-widget-color2;
+      border-left: 2px solid $bg-widget-color;
+    }
+
+    .sy{
+      border-top: 2px solid $aux-widget-color4;
+      border-left: 2px solid $bg-widget-color;
+    }
+
+    .sw{
+      border-top: 2px solid $aux-widget-color5;
+      border-left: 2px solid $bg-widget-color;
+    }
+  }
+
+  .actions{
+
+    .action{
+      padding: 0 0;
+    }
+
+    .btn-secondary{
+      width: 100%;
+      border-radius: 0px;
+      margin: 0 0;
+      color: $bg-widget-color;
+      background-color: lighten($fc-widget-color2, 13);
+
+      span{
+        font-size: 1.5em;
+      }
+    }
+
+    .btn-secondary:hover{
+      background-color: $fc-widget-color2;
+    }
+
+  }
 }
 
 /* Responsive: Portrait tablets and up */

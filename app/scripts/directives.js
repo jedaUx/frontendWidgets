@@ -1,6 +1,6 @@
 'use strict';
 
-var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngTagsInput']);
+var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngTagsInput','chart.js']);
 
 dModule.directive('contactProfile', function(){
       return {
@@ -23,5 +23,13 @@ dModule.directive('contactForm', function(){
         controller: 'contactFormCtrl',
         scope: false,
         templateUrl: 'widgets/contact-form.html'
+      };
+    });
+
+dModule.directive('datatransferReport', function(){
+      return {
+        controller: 'datatransfer-reportCtrl',
+        scope: false,
+        templateUrl: 'widgets/datatransfer-report.html'
       };
     });

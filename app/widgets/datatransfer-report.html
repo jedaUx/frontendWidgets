@@ -1,0 +1,59 @@
+<div ng-controller="datatransfer-reportCtrl" class="reports">
+
+  <uib-tabset active="active">
+    <uib-tab index="0" heading="Diagram stats">
+      <div class="container datatransfer">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="title">
+              <h5 class="text-center">DATA TRANSFERS</h5>
+            </div>
+            <div class="chart">
+              <canvas id="doughnut" class="chart chart-doughnut"
+                chart-data="datatransferStats" chart-labels="labels"
+                chart-colors="colors">
+              </canvas>
+              <div class="summary">
+                <h4 class="text-center">{{userData.totalfiles}} files</h4>
+                <h1 class="text-center">{{userData.totalsize}} Gb</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row stats text-center">
+          <div ng-repeat="datatype in userData.datatypes" ng-hide="datatype.type == 'Others'" class="col-xs-4 stat"
+          ng-class="{sg: $index == 0, sr: $index == 1, sy: $index == 2, so }">
+            <h6>{{datatype.type}}</h6>
+            <span>{{datatype.percentage}}%</span>
+          </div>
+        </div>
+        <div class="row actions">
+          <div class="col-xs-4 action">
+            <button class="btn btn-secondary" type="button" name="button">
+              <span class="glyphicon glyphicon-cloud-upload"></span>
+              <h6>Upload files</h6>
+            </button>
+          </div>
+          <div class="col-xs-4 action">
+            <button class="btn btn-secondary" type="button" name="button">
+              <span class="glyphicon glyphicon-share"></span>
+              <h6>Share link</h6>
+            </button>
+          </div>
+          <div class="col-xs-4 action">
+            <button class="btn btn-secondary" type="button" name="button">
+              <span class="glyphicon glyphicon-save"></span>
+              <h6>Backup</h6>
+            </button>
+          </div>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Month report">
+      <div class="container">
+        Month Report
+      </div>
+    </uib-tab>
+  </uib-tabset>
+
+</div>
