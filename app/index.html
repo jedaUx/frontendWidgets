@@ -13,7 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components\ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="testFrontApp">
@@ -24,6 +24,9 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
+        <div class="pull-right">
+          <div ng-translate-language-select></div>
+        </div>
         <div class="container">
           <div class="navbar-header">
 
@@ -81,14 +84,18 @@
     <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
     <script src="bower_components/chart.js/dist/Chart.js"></script>
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
     <script src="bower_components/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
-    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
-    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="bower_components/angular-translate/dist/angular-translate.js"></script>
+    <script src="bower_components/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate/dist/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate/dist/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/angular-translate/dist/angular-translate-handler-log/angular-translate-handler-log.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -98,6 +105,8 @@
         <script src="scripts/controllers/contactProfile.js"></script>
         <script src="scripts/controllers/contactForm.js"></script>
         <script src="scripts/controllers/datatransferReport.js"></script>
+        <script src="scripts/LocaleService.js"></script>
+        <script src="scripts/LanguageSelectDirective.js"></script>
         <!-- endbuild -->
 </body>
 </html>

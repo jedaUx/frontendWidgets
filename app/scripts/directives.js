@@ -1,6 +1,18 @@
 'use strict';
 
-var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngTagsInput','chart.js']);
+var dModule = angular.module('frontDirectives', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngTagsInput','chart.js','pascalprecht.translate',
+'tmh.dynamicLocale']);
+
+// var translations = {
+//   HEADLINE: 'What an awesome module!',
+//   PARAGRAPH: 'Srsly!'
+// };
+//
+// dModule.config(['$translateProvider', function ($translateProvider) {
+//   // add translation table
+//   $translateProvider.translations('en', translations);
+//   $translateProvider.preferredLanguage('en');
+// }]);
 
 dModule.directive('contactProfile', function(){
       return {
